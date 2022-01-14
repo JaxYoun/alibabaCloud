@@ -1,0 +1,29 @@
+#server:
+#  port: 8200
+#spring:
+#  application:
+#    name: alibaba-order
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848
+#    sentinel:
+#      transport:
+#        dashboard: 127.0.0.1:8080
+#        port: 9002
+#
+#  sleuth:
+#    sampler:
+#      rate: 1
+#      probability: 0.1
+#
+#  zipkin:
+#    base-url: http://127.0.0.1:9411
+#    discovery-client-enabled: false
+#
+#alibaba-video:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+#yang:
+#  name: yjx

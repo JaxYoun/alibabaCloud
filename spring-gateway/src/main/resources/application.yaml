@@ -1,0 +1,31 @@
+#server:
+#  port: 8888
+#spring:
+#  application:
+#    name: spring-gateway
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848
+#    gateway:
+#      routes:
+#        - id: alibaba-order
+#          # uri: http://127.0.0.1:8200
+#          uri: lb://alibaba-order
+#          order: 1
+#          predicates:
+#            - Path=/alibaba-order/**
+#          filters:
+#            - StripPrefix=1
+#      discovery:
+#        locator:
+#          enabled: true
+#
+#  sleuth:
+#    sampler:
+#      rate: 1
+#      probability: 0.1
+#
+#  zipkin:
+#    base-url: http://127.0.0.1:9411
+#    discovery-client-enabled: false
