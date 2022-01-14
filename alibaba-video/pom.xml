@@ -7,14 +7,17 @@
         <groupId>com.yang</groupId>
         <artifactId>alibabaCloud</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath/>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>com.yang</groupId>
     <artifactId>alibaba-video</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>alibaba-video</name>
     <description>alibaba-video</description>
+
+    <properties>
+        <docker.image.prefix>alibaba-video</docker.image.prefix>
+    </properties>
 
     <dependencies>
 
@@ -74,10 +77,26 @@
     </dependencies>
 
     <build>
+        <finalName>alibaba-video</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                    <addResources>true</addResources>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>1.4.10</version>
+                <configuration>
+                    <repository>${docker.image.prefix}/${project.artifactId}</repository>
+                    <buildArgs>
+                        <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+                    </buildArgs>
+                </configuration>
             </plugin>
         </plugins>
     </build>

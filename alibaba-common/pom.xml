@@ -7,7 +7,7 @@
         <groupId>com.yang</groupId>
         <artifactId>alibabaCloud</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath/>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <groupId>comg.yang</groupId>

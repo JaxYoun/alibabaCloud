@@ -7,15 +7,17 @@
         <groupId>com.yang</groupId>
         <artifactId>alibabaCloud</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath/>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>com.yang</groupId>
     <artifactId>alibaba-order</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>alibaba-order</name>
     <description>alibaba-order</description>
-    <packaging>jar</packaging>
+
+    <properties>
+        <docker.image.prefix>alibaba-order</docker.image.prefix>
+    </properties>
 
     <dependencies>
         <!-- 1.Spring-boot-web -->
@@ -74,10 +76,26 @@
     </dependencies>
 
     <build>
+        <finalName>alibaba-order</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                    <addResources>true</addResources>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>1.4.10</version>
+                <configuration>
+                    <repository>${docker.image.prefix}/${project.artifactId}</repository>
+                    <buildArgs>
+                        <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+                    </buildArgs>
+                </configuration>
             </plugin>
         </plugins>
     </build>
