@@ -1,0 +1,11 @@
+server:
+  port: 8400
+
+spring:
+  application:
+    name: alibaba-mogodb
+  data:
+    mongodb:
+      port: 27017
+      host: 127.0.0.1
+      database: test
