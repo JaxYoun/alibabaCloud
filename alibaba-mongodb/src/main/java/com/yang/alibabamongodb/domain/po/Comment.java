@@ -29,4 +29,6 @@ public class Comment {
     @Field("publishTime")
     private LocalDateTime publishTime;
 
+    private Long archId;
+
 }

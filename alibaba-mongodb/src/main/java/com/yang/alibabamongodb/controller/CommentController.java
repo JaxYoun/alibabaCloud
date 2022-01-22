@@ -40,4 +40,9 @@ public class CommentController {
         return this.commentService.pageByUserId(userId);
     }
 
+    @GetMapping("/increase")
+    public void increase(@RequestParam String docId) {
+        this.commentService.increase(docId);
+    }
+
 }

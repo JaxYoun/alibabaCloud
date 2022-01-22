@@ -17,4 +17,6 @@ public interface CommentService {
     CommentVO addComment(Comment po);
 
     Page<CommentVO> pageByUserId(String userId);
+
+    void increase(String docId);
 }
