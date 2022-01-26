@@ -20,6 +20,7 @@
         <spring.cloud.alibaba.version>2.2.1.RELEASE</spring.cloud.alibaba.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
         <lombok.version>1.18.16</lombok.version>
+        <mybatis-plus.version>3.4.3.4</mybatis-plus.version>
     </properties>
 
     <modules>
@@ -29,6 +30,7 @@
         <module>alibaba-order</module>
         <module>alibaba-video</module>
         <module>alibaba-mongodb</module>
+        <module>alibaba-mysql</module>
     </modules>
 
     <dependencyManagement>
@@ -60,6 +62,14 @@
                 <scope>import</scope>
             </dependency>
 
+            <!-- 4.mybatis-plus -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!-- 5.mapstruct -->
             <dependency>
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct</artifactId>
