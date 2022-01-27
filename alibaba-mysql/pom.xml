@@ -39,7 +39,8 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
 
-        <dependency>
+        <!-- Swagger2 -->
+        <!--<dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
         </dependency>
@@ -47,12 +48,13 @@
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
-        </dependency>
+        </dependency>-->
 
-        <!--<dependency>
+        <!-- Swagger3 -->
+        <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-boot-starter</artifactId>
-        </dependency>-->
+        </dependency>
 
         <dependency>
             <groupId>org.mapstruct</groupId>
