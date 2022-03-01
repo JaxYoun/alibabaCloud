@@ -1,4 +1,4 @@
-package com.yang.alibabamysql.controller;
+package com.yang.alibabamysql.domain.bo;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import lombok.Data;
