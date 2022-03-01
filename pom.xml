@@ -23,6 +23,7 @@
         <mybatis-plus.version>3.4.3.4</mybatis-plus.version>
         <swagger2.version>2.9.2</swagger2.version>
         <swagger3.version>3.0.0</swagger3.version>
+        <xstream.version>1.4.19</xstream.version>
     </properties>
 
     <modules>
@@ -106,6 +107,12 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-boot-starter</artifactId>
                 <version>${swagger3.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.thoughtworks.xstream</groupId>
+                <artifactId>xstream</artifactId>
+                <version>${xstream.version}</version>
             </dependency>
 
         </dependencies>
