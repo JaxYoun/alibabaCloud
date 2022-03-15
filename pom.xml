@@ -24,6 +24,7 @@
         <swagger2.version>2.9.2</swagger2.version>
         <swagger3.version>3.0.0</swagger3.version>
         <xstream.version>1.4.11.1</xstream.version>
+        <compiledflow.version>1.1.0</compiledflow.version>
     </properties>
 
     <modules>
@@ -113,6 +114,12 @@
                 <groupId>com.thoughtworks.xstream</groupId>
                 <artifactId>xstream</artifactId>
                 <version>${xstream.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.compileflow</groupId>
+                <artifactId>compileflow</artifactId>
+                <version>${compiledflow.version}</version>
             </dependency>
 
         </dependencies>
