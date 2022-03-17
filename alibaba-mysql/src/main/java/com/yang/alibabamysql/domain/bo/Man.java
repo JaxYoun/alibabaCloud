@@ -16,7 +16,10 @@ public class Man {
     private String name;
 
     @XStreamAlias("sonList")
-    protected List<Son> sonList;
+    private List<Son> sonList;
+
+    @XStreamAlias("sssson")
+    private Son son;
 
     @XStreamAlias(value = "son", impl = Son.class)
     @Data

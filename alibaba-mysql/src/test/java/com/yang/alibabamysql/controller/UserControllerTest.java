@@ -31,6 +31,11 @@ class UserControllerTest extends AlibabaMysqlApplicationTests {
         man.setName("yjx");
         man.setSonList(sonArrayList);
 
+        Man.Son son0 = new Man.Son();
+        son0.setId(3L);
+        son0.setName("ypw----");
+        man.setSon(son0);
+
         System.err.println(xStreamMarshaller.getXStream().toXML(man));
     }
 
